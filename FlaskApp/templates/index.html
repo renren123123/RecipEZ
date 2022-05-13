@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="icon" href="data:,">
+        <title>
+            RecipEZ
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+        <h1> <a href="http://localhost:5000/">  RecipEZ </a></h1>
+
+    </head>
+
+    <body>
+        <div class = titlecontainer>
+            <div class = title>
+                What Would You Like To Do
+            </div>
+        </div>
+        <img src="static\hungry.png" alt="hungry" width = "70" height = "60" class ="hungry_img">
+        <!-- <h2> What Would You Like To Do </h2> -->
+        <div class = leftside>
+            <div class = button>
+                <input class="button" type="button" value="Search for Recipes" onClick="window.location.href = 'searchRecipe.html'">
+            </div>
+        </div>
+
+        <div class = rightside>
+            <div class = button>
+                <input class="button" type="button" value="Search for Reviews" onClick="window.location.href = 'searchReview.html'">
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+<style>
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+
+
+    h1 {
+        /* max-width: 500px; */
+        margin: auto;
+        text-align: center;
+        font-family: 'Bakbak One', cursive;
+        font-size: 100px;
+    }
+
+    /* h2 {
+        max-width: 500px;
+        padding-top: 1%;
+        margin: auto;
+        text-align: center;
+        font-family: 'Bakbak One', cursive;
+        /* font-size: 100px; */
+    /* } */
+
+    .title{
+        font-size: 100px;
+        color: rgb(247, 247, 249);
+        text-align: center;
+        font-family: 'Bakbak One', cursive;
+    }
+    .titlecontainer { 
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #555555;
+        height: 150px;
+        width: 1500px;
+        position: relative;
+        border: 3px solid rgb(0, 3, 0);
+    }
+
+    .hungry_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3em;
+        animation: hungry_img 5s infinite linear;
+    }
+
+    .leftside {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .rightside {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 75%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .button {
+      background-color: #555555; 
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: 'Bakbak One', cursive;
+    }
+
+    .button input:hover {
+        background-color: black;
+        color: white;
+    }
+
+    @keyframes hungry_img {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+</style>

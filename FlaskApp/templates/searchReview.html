@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <title>RecipEZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    <h1> <a href="http://localhost:5000/">  RecipEZ </a></h1>
+</head>
+
+    <body>
+      <h2> I want to ... </h2>
+        <div class="container">
+            <div class="center">
+              <input class="button" type="button" value="Leave a new review" onClick="window.location.href = 'newReview.html'">
+              <input class="button" type="button" value="View an old review" onClick="window.location.href = 'oldReview.html'">
+            </div>
+          </div>
+    </body>
+
+</html>
+
+<style>
+  
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    h1 {
+        /* max-width: 500px; */
+        margin: auto;
+        text-align: center;
+        font-family: 'Bakbak One', cursive;
+        font-size: 100px;
+    }
+
+    h2 {
+        max-width: 500px;
+        padding-top: 3%;
+        margin: auto;
+        text-align: center;
+        font-family: 'Bakbak One', cursive;
+
+        font-size: 50px;
+    }
+
+    .container { 
+      height: 200px;
+      position: relative;
+      /* border: 3px solid green;  */
+    }
+    
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .button {
+      background-color: #555555; 
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    .button:hover {
+        background-color: black;
+        color: white;
+    }
+
+</style>
+    

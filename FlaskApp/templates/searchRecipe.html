@@ -1,0 +1,168 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>RecipEZ</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+        <h1> <a href="http://localhost:5000/">  RecipEZ </a></h1>
+    </head>
+
+    <body>
+        <script type="text/javascript" src="/static/searchRecipe.js"></script>
+        <div class = searchContainer>
+            <div class = title>
+                <label for="name">
+                    Search Recipe by Ingredient:
+                </label>
+            </div>
+            <br>
+            <div class = searchwrapper>
+                <input type="text" id="Ingredient" name="Ingredient" value = "" style="width: 200px;height: 20px;">
+            </div>
+            <br>
+            <div class = searchwrapper>
+                <button onclick="onSubmitIngredient()" value="Submit" style="width: 100px;height: 30px;">
+                    Submit
+                </button>
+            </div>
+        </div>
+
+        <div class = leftside>
+            <div class = titlecontainer> 
+                <button class=bigButton onclick="onSubmitPopular()">
+                    Show Recipes with High Ratings
+                </button>
+            </div>
+        </div>
+
+        <div class = rightside>
+            <div class = titlecontainer> 
+                <button class=bigButton onclick="onSubmitEasy()">
+                    Show Recipes that are EZ to Make
+                </button>
+              
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+            <div class = titlecontainer> 
+                <button class=bigButton onclick="onSubmitAvgRatings()">
+                    Show Recipes Rated Highly by Trusted Users
+                </button>
+              
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <output id="output" value="" class="center"></output>
+        
+
+    </body>
+
+</html>
+
+
+
+<style>
+
+    table{
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-left: auto;
+            margin-right: auto;
+    }
+    
+    th, td{
+            padding: 10px 20px;
+            border: 1px solid #000;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    h1 {
+        /* max-width: 500px; */
+        margin: auto;
+        text-align: center;
+        font-family: 'Bakbak One', cursive;
+        font-size: 100px;
+    }
+
+    .searchContainer{
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right:auto;
+        background-color: #555555;
+        height: 140px;
+        width: 500px;
+        position: relative;
+        border: 3px solid rgb(0, 3, 0);
+    }
+
+    .searchwrapper{
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        text-align:center;
+    }
+
+    .title{
+        font-size: 25px;
+        color: rgb(247, 247, 249);
+        text-align: center
+    }
+    .titlecontainer { 
+        margin-left: auto;
+        margin-right:auto;
+        background-color: #555555;
+        height: 70px;
+        width: 350px;
+        position: relative;
+        border: 3px solid rgb(0, 3, 0);
+    }
+    
+    .bigButton{
+        font-size: 25px;
+        color: #555555;
+        text-align: center
+    }
+
+    .output{
+        margin: auto;
+        width: 100%;
+        height: 200px;
+    }
+
+    .leftside {
+        margin: 0;
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .rightside {
+        margin: 0;
+        position: absolute;
+        top: 30%;
+        left: 80%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .vertical {
+        border-left: 6px solid black;
+        height: 650px;
+        position:absolute;
+        left: 50%;
+    }
+
+</style>
